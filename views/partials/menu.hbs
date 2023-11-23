@@ -1,0 +1,181 @@
+<header>
+    <nav>
+        <section id='registration-authentication-form' class='window'>
+            <div class='cross'>x</div>
+            <div class='window-content'>
+                <h1></h1>
+                <form>
+                    <fieldset>
+                        <div>
+                            <label for='login'>Login :</label>
+                            <input type="text" id='login' name='login'>
+                            <div class='form-errors'>
+                                <p>Логин должен быть не короче 3 и не длинее 10 букв</p>
+                                <p id='login-error'></p>
+                            </div>
+                        </div>
+                        <div>
+                            <label for='password'>Password :</label>
+                            <input type="password" id='password' name='password'>
+                            <div class='form-errors'>
+                                <p>Пароль должен быть не короче 5 и не длинее 15 символов</p>
+                                <p id='password-error'></p>
+                            </div>
+                        </div>
+                        <button type='submit' class='btn form-group-btn clickable' id='send-authentication-form-btn'>Send</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section id='message-window' class='window'>
+            <div class='window-content'>
+                <p>Message from server</p>
+            </div>
+        </section>
+        <div>
+            <div><span class='fa fa-clock-o' aria-hidden='true'></span><span>Часы Работы: 10:00 - 21:00</span></div>
+            <div><span class='fa fa-mobile' aria-hidden='true'></span><span>Позвоните нам 000-000-0000</span></div>
+            <div id='burger'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div id='user-nav-menu'>
+                    <div class='containing-block'><span class='fa fa-search'></span>
+                        <div class='nested-block'>
+                            <form>
+                                <div>
+                                    <div><input type="search" placeholder="Найти в каталоге..." name='search'></div>
+                                    <div class='form-errors'>
+                                        <p>Введите запрос</p>
+                                    </div>
+                                </div>
+                                <div> <a href='' id='search-btn'><span class='fa fa-search'></span></a></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class='containing-block'><span class='fa fa-user-o'></span>
+                        <div class='nested-block'>
+                            <ul id='user-account-menu'>
+                                <li id='registration-btn' class='user-menu-option {{#unless showUserNavMenu}}show-option{{/unless}}'><span class='fa fa-user-o' aria-hidden='true'></span><span>Регистрация</span></li>
+                                <li id='authentication-btn' class='user-menu-option {{#unless showUserNavMenu}}show-option{{/unless}}'><span class='fa fa-user-o' aria-hidden='true'></span><span>Войти</span></li>
+                                <li id='wishlist-btn' class='auth-user-menu-option {{#if showUserNavMenu}}show-option{{/if}}'><a href='/wishlist'><span class='fa fa-heart-o' aria-hidden='true'></span><span>Wishlist</span></a></li>
+                                <li id='logout-btn' class='auth-user-menu-option {{#if showUserNavMenu}}show-option{{/if}}'><a href='/logout'><span class='fa fa-user-o' aria-hidden='true'></span><span>Выйти</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id='cart-btn' class='auth-user-menu-option {{#if showUserNavMenu}}show-option{{/if}}'><a href='/cart'><span class='fa fa-shopping-cart'></span></a>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='product-nav-menu-wrapper'>
+            <div class='cross'>x</div>
+            <div id='product-nav-menu'>
+                <div><span><a href='/'>Главная</span></a></div>
+                <div class='containing-block arrow-container'><span>Магазин</span><span class='fas fa-angle-down'></span>
+                    <div class='menu nested-block'>
+                        <ul>
+                            <li class='containing-block arrow-container'>Уход<span class='fas fa-angle-down turn-arrow-up'></span>
+                                <div class='menu sub-menu nested-block'>
+                                    <ul>
+                                        <li id='care'><a href='/category/care'>Очищение</a></li>
+                                        <li id='colors'><a href='/category/colors'>Маски</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class='containing-block arrow-container'>Процедуры<span class='fas fa-angle-down'></span>
+                                <div class='menu sub-menu nested-block'>
+                                    <ul>
+                                        <li>Ботокс</li>
+                                        <li>Ламинирование</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>Стрижка</li>
+                            <li>Прическа</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='containing-block arrow-container'><span>Уход за волосами</span><span class='fas fa-angle-down'></span>
+                    <div class='menu nested-block'>
+                        <div>
+                            <h6>Маски</h6>
+                            <ul>
+                                {{#each productsData.mask}}
+                                <li><a href='/product/{{this._id}}'>{{this.name}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div>
+                            <h6>Бальзамы</h6>
+                            <ul>
+                                {{#each productsData.balm}}
+                                <li><a href='/product/{{this._id}}'>{{this.name}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div>
+                            <h6>Масла</h6>
+                            <ul>
+                                {{#each productsData.oil}}
+                                <li><a href='/product/{{this._id}}'>{{this.name}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class='containing-block arrow-container'><span>Окрашивания</span><span class='fas fa-angle-down'></span>
+                    <div class='menu nested-block'>
+                        <div>
+                            <h6>Аммиачные</h6>
+                            <ul>
+                                {{#each productsData.ammoniac}}
+                                <li><a href='/product/{{this._id}}'>{{this.name}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div>
+                            <h6>Безаммиачные</h6>
+                            <ul>
+                                {{#each productsData.ammoniacFree}}
+                                <li><a href='/product/{{this._id}}'>{{this.name}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div>
+                            <h6>Цветные</h6>
+                            <ul>
+                                {{#each productsData.colored}}
+                                <li><a href='/product/{{this._id}}'>{{this.name}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class='containing-block arrow-container'><span>Распродажи</span><span class='fas fa-angle-down'></span>
+                    <div class='menu nested-block'>
+                        <ul>
+                            <li id='sale-care'><a href='/sale'>Уход и Красители</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='containing-block arrow-container'><span>Бренды</span><span class='fas fa-angle-down'></span>
+                    <div class='menu nested-block'>
+                        <ul>
+                            <li>Loreal</li>
+                            <li>Kerastase</li>
+                            <li>Wella</li>
+                            <li>Matrix</li>
+                            <li>Pantene</li>
+                            <li>Revision</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

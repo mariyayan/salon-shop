@@ -1,0 +1,51 @@
+ {{>menu productsData=productsData showUserNavMenu=showUserNavMenu}}
+<article id={{product._id}} class='product-full-info'>
+    <div><img src='/{{product.src}}'></div>
+    <div>
+        <div>
+            <h3>{{product.name}}</h3>
+            <p>{{product.price}} $</p>
+            <p><span class='fa fa-check' aria-hidden='true'></span><span>в наличии, {{product.quantity}}</span></p>
+            <p>{{product.description}} </p>
+            <p id='product-quantity'><span class='fas fa-chevron-down'></span></span><input type='number' readonly="" value='1' max={{product.quantity}} min='1'><span class='fas fa-chevron-up'></span></p></span>
+            <div>
+                <span class='add-to-cart-btn'>
+                    <span class='icon-hover'>
+                        <span class='fa fa-shopping-cart'>
+                            <span>Add to cart</span>
+                        </span>
+                    </span>
+                    <p class='hint'>Add to cart</p>
+                </span>
+                <span class='add-to-wishlist-btn'>
+                    <span class='icon-hover'>
+                        <span class='fa fa-heart-o'></span>
+                    </span>
+                    <p class='hint'>Add to wishlist</p>
+                </span>
+            </div>
+        </div>
+        <div>
+            <div class='details containing-block'>
+                <div class='summary arrow-container'>
+                    <p><span>Delivery</span><span class='fas fa-angle-down'></span></p>
+                </div>
+                <ul class='nested-block'>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                </ul>
+            </div>
+            <div class='details containing-block'>
+                <div class='summary arrow-container'>
+                    <p><span>Payment</span><span class='fas fa-angle-down'></span></p>
+                </div>
+                <ul class='nested-block'>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+<script type='module' src='/js/fullInfo.js'></script>

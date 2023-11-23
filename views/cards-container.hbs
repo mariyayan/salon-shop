@@ -1,0 +1,10 @@
+{{>menu productsData=menuData showUserNavMenu=showUserNavMenu}}
+<section id={{containerId}} class='cart-wishlist'>
+    {{#each productsData}}
+    {{>card product=this btnClass=../btnClass route=../route}}
+    {{else}}
+    <p id='empty'>Ничего не добавлено</p>
+    {{/each}}
+</section>
+<script type='module' src='/js/cart-wishlist.js'></script>
+

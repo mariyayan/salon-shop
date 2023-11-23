@@ -1,0 +1,12 @@
+{{>menu productsData=productsData showUserNavMenu=showUserNavMenu}}
+<section id='sales'>
+    {{>switch-btns switchBtnsInfo=switchBtnsInfo}}
+    <div id='sales-cards-container'>
+        {{#each products}}
+        {{>product-card product=this classes=true}}
+        {{else}}
+        <p>По вашему запросу ничего не найдено</p>
+        {{/each}}
+    </div>
+</section>
+<script type='module' src='/js/sales.js'></script>

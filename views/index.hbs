@@ -1,0 +1,100 @@
+
+{{>menu productsData=productsData showUserNavMenu=showUserNavMenu}}
+<main>
+    <div id='main-slider' class='slider'>
+        <div class='slides-wrapper'>
+            <div>
+                <img src='/img/50.jpeg'>
+                <div class='slider-text text-active'>
+                    <p>1 Lorem ipsum</p>
+                    <button class='btn'>LOREM</button>
+                </div>
+            </div>
+            <div>
+                <img src='/img/47.jpg''>
+                <div class='slider-text'>
+                    <p>2 Lorem ipsum</p>
+                    <button class='btn'>LOREM</button>
+                </div>
+            </div>
+            <div>
+                <img src='/img/48.jpg''>
+                <div class='slider-text'>
+                    <p>3 Lorem ipsum</p>
+                    <button class='btn'>LOREM</button>
+                </div>
+            </div>
+            <div>
+                <img src='/img/49.jpg''>
+                <div class='slider-text'>
+                    <p>4 Lorem ipsum</p>
+                    <button class='btn'>LOREM</button>
+                </div>
+            </div>
+        </div>
+        <div class='slider-arrows'>
+            <div class='left-btn'><span class='fas fa-chevron-left'></span></div>
+            <div class='right-btn'><span class='fas fa-chevron-right'></span></div>
+        </div>
+        <div class='nav-btns-slider'>
+            <div class='slider-nav-btn nav-btn-active'></div>
+            <div class='slider-nav-btn'></div>
+            <div class='slider-nav-btn'></div>
+            <div class='slider-nav-btn'></div>
+        </div>
+    </div>
+    {{>carousel productsData=productsData.popular switchBtns=switchBtns carouselId=carouselId subCategoriesArr=subCategoriesArr}}
+    <section id='testimonials-wrapper'>
+        <p>They say</p>
+        <h2>TESTIMONIALS</h2>
+        <div id='testimonials' class='slider'>
+            <div class='slides-wrapper'>
+                <article>
+                    <span class='fas fa-quote-left'></span>
+                    <p>1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p>LOREM IPSUM</p>
+                    <span class='fas fa-quote-right'></span>
+                </article>
+                <article>
+                    <span class='fas fa-quote-left'></span>
+                    <p>
+                        2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>LOREM IPSUM</p>
+                    <span class='fas fa-quote-right'></span>
+                </article>
+                <article>
+                    <span class='fas fa-quote-left'></span>
+                    <p>
+                        3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>LOREM IPSUM</p>
+                    <span class='fas fa-quote-right'></span>
+                </article>
+                <article>
+                    <span class='fas fa-quote-left'></span>
+                    <p>
+                        4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>LOREM IPSUM</p>
+                    <span class='fas fa-quote-right'></span>
+                </article>
+            </div>
+            <div class='slider-arrows'>
+                <div class='left-btn'><span class="fa-solid fa-arrow-left"></span></div>
+                <div class='right-btn'> <span class="fa-solid fa-arrow-right"></span></div>
+            </div>
+            <div class='nav-btns-slider'>
+                <div class='slider-nav-btn nav-btn-active'></div>
+                <div class='slider-nav-btn'></div>
+                <div class='slider-nav-btn'></div>
+                <div class='slider-nav-btn'></div>
+            </div>
+        </div>
+    </section>
+</main>
+<script type='module' src='/js/main.js'></script>
