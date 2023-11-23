@@ -1,0 +1,62 @@
+/* SALES */
+
+#sales {
+    padding: 100px 40px;
+}
+
+#sales h2 {
+    text-align: center;
+}
+
+#sales .nav-btns {
+    margin: 30px;
+}
+
+#sales-cards-container {
+    border: solid black 1px;
+    padding: 25px;
+}
+
+#sales-cards-container>article {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    padding: 0;
+    transition-property: opacity;
+    transition-duration: 300ms;
+}
+
+
+#sales-cards-container>.show-element {
+    width: 20%;
+    margin: 30px;
+    padding: 20px 15px;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    #sales article {
+        width: 40% !important;
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #sales-cards-container {
+        flex-direction: column;
+
+    }
+
+    #sales-cards-container>.show-element {
+        margin: 0 0 60px 0;
+    }
+
+    #sales article {
+        width: 100% !important;
+    }
+}

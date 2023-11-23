@@ -1,0 +1,319 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+span {
+    font-family: fontawesome !important;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#user-nav-menu,
+#product-nav-menu,
+#product-nav-menu>div,
+.btn,
+.nested-block,
+.icon-hover:hover,
+.icon-hover:hover>p,
+.fa-angle-down,
+#sales-cards-container>article {
+    -webkit-transition: all linear 300ms;
+    -moz-transition: all linear 300ms;
+    -o-transition: all linear 300ms;
+    -ms-transition: all linear 300ms;
+    transition: all linear 300ms;
+}
+
+.menu,
+.nav-btn-active,
+.nav-btn:hover,
+.slider-text,
+#category1,
+#category2,
+#category3 {
+    -webkit-transition: all linear 500ms;
+    -moz-transition: all linear 500ms;
+    -ms-transition: all linear 500ms;
+    -o-transition: all linear 500ms;
+    transition: all linear 500ms;
+}
+
+.fa-angle-down {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+nav>div:nth-of-type(1),
+#sales-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.slides-wrapper,
+.nav-btns,
+.carousel .slider-arrows,
+.product-card>div>div,
+#user-nav-menu form,
+#product-nav-menu,
+footer,
+.product-full-info>div:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+#user-nav-menu,
+.nav-btns-slider,
+.card,
+.card>a,
+.product-full-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.slider {
+    position: relative;
+}
+
+.nav-btns>div {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.slider-arrows,
+.nav-btns-slider {
+    position: absolute;
+}
+
+.nav-btns-slider {
+    top: calc(95% - 20px);
+    left: calc(50% - (150px / 2));
+    width: 150px;
+    height: 20px;
+}
+
+
+.left-btn:hover,
+.right-btn:hover {
+    cursor: pointer;
+}
+
+
+.text-active {
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-200px);
+    -o-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+}
+
+.turn-arrow-up {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.nav-btn-active {
+    background-color: rgb(255, 174, 201);
+    color: white;
+    border-radius: 10px;
+}
+
+#main-slider .nav-btns-slider>.nav-btn-active {
+    background-color: rgb(255, 174, 201);
+    width:20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.nav-btn {
+    padding: 7px 10px;
+}
+
+.nav-btn:hover {
+    background-color: rgb(255, 174, 201);
+    border-radius: 10px;
+}
+
+.btn {
+    width: 120px;
+    color: white;
+    background-color: rgb(255, 174, 201);
+    padding: 10px 3px;
+    font-size: 17px;
+    border: solid transparent 1px;
+    border-radius: 10px;
+}
+
+
+.btn:hover {
+    color: rgb(255, 174, 201);
+    background-color: white;
+    border: solid rgb(154, 154, 154) 1px;
+    cursor: pointer;
+}
+
+.show-element {
+    visibility: visible !important;
+    height: auto !important;
+    opacity: 1 !important;
+}
+
+.show-window {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+header nav .window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    visibility: hidden;
+    z-index: 5;
+    opacity: 0;
+   display: block;
+    -webkit-transition: opacity linear 900ms;
+    -moz-transition: opacity linear 900ms;
+    -o-transition: opacity linear 900ms;
+    -ms-transition: opacity linear 900ms;
+    transition: opacity linear 900ms;
+}
+
+.window-content {
+    background-color: white;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 450px;
+    padding: 25px;
+    border: solid rgb(181, 179, 179) 1px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#message-window{
+    height:100%!important;
+
+}
+
+#message-window .window-content{
+    height: 150px;
+    width:50%;
+}
+
+.cross {
+    position: absolute;
+    background-color: white;
+    border: solid rgb(198, 198, 198) 1px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 35px;
+    top: 0;
+    left: calc(100% - 40px);
+    z-index: 5;
+}
+
+
+.cross:hover {
+    cursor: pointer;
+}
+
+.open {
+    visibility: visible !important;
+}
+
+.add-height {
+    height: auto !important;
+
+}
+
+.add-opacity {
+    opacity: 1 !important;
+}
+
+.hide-element {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0 !important;
+}
+
+.show-option {
+    visibility: visible !important;
+    height: auto !important;
+    opacity: 1 !important;
+    padding: 10px 3px !important;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+
+    .window-content {
+        width: 80%;
+    }
+
+    .text-active {
+        -webkit-transform: translateY(-80px);
+        -moz-transform: translateY(-80px);
+        -o-transform: translateY(-80px);
+        -ms-transform: translateY(-80px);
+        transform: translateY(-80px);
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .nav-btns {
+        justify-content: space-around;
+    }
+
+    .nav-btns>div {
+        margin-right: 0;
+    }
+
+    .window-content {
+        width: 96%;
+        height: 450px;
+    }
+
+    form .form-errors {
+        height: 70px;
+    }
+}

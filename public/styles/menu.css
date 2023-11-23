@@ -1,0 +1,393 @@
+nav>div:nth-of-type(1),
+#product-nav-menu {
+    justify-content: space-around;
+}
+
+nav>div:nth-of-type(1)>div {
+    width: 25%;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+nav>div:nth-of-type(1)>div>span {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+nav .nested-block {
+    display: none;
+}
+
+nav .show-element {
+    display: flex;
+}
+
+#burger {
+    visibility: hidden;
+    margin-top: 10px;
+}
+
+#burger>div {
+    width: 45px;
+    height: 5px;
+    background-color: black;
+}
+
+#burger>div:nth-of-type(2) {
+    margin: 5px 0;
+}
+
+#user-nav-menu {
+    width: 50%;
+}
+
+#user-nav-menu>div {
+    width: 30%;
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#user-nav-menu>div:hover {
+    cursor: pointer;
+}
+
+#user-nav-menu>div span {
+    font-size: 24px;
+}
+
+#user-nav-menu .nested-block {
+    z-index: 4;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    background-color: white;
+    visibility: hidden;
+}
+
+.user-menu-option,
+.auth-user-menu-option {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+}
+
+#user-nav-menu form {
+    border: solid rgb(255, 213, 216) 3px;
+    width: 200px;
+    text-align: start;
+    border-radius: 10px;
+}
+
+#user-nav-menu form>div:nth-of-type(1) {
+    width: 100%;
+}
+
+
+#user-nav-menu form>div:nth-of-type(1)>div {
+    width: 100%;
+    height: 40px;
+}
+
+#user-nav-menu form>div:nth-of-type(1)>div>input {
+    width: 100%;
+    height: 100%;
+}
+
+#user-nav-menu form>div:nth-of-type(2) {
+    width: 20%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#user-nav-menu form>input {
+    width: 80%;
+
+}
+
+#user-nav-menu form>button {
+    width: 10%;
+}
+
+
+#user-account-menu {
+    text-align: start;
+    width: 170px;
+    border: solid black 1px;
+    padding: 15px 10px;
+}
+
+#user-account-menu>li {
+    border-bottom: solid black 1px;
+}
+
+#user-account-menu>li:hover {
+    cursor: pointer;
+}
+
+#user-account-menu>li span {
+    margin-left: 5px;
+    font-size: 17px;
+}
+
+#search-btn>span{
+    color:rgb(255, 213, 216);
+}
+
+#product-nav-menu-wrapper .cross {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#product-nav-menu {
+    padding: 40px 0;
+    background-color: rgb(255, 174, 201);
+}
+
+
+#product-nav-menu>div {
+    color: white;
+    position: relative;
+    font-size: 17px;
+}
+
+#product-nav-menu>div:nth-of-type(1) a{
+    color:white;
+}
+
+#product-nav-menu>div>div {
+    flex-direction: row;
+}
+
+
+#product-nav-menu>div>div>div:nth-of-type(2) {
+    margin: 0 40px;
+}
+
+
+#product-nav-menu>div>div>div>h6 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#product-nav-menu>div:hover,
+#product-nav-menu li:hover,
+#product-nav-menu a:hover {
+    cursor: pointer;
+}
+
+
+    #product-nav-menu li:hover,
+    #product-nav-menu a:hover {
+        color: rgb(255, 174, 201);
+        border-color: rgb(255, 174, 201);
+        cursor: pointer;
+    }
+
+
+#product-nav-menu>div>div>ul>li {
+    position: relative;
+}
+
+.sub-menu {
+    left: 100%;
+    z-index: 2;
+}
+
+#product-nav-menu li,
+#product-nav-menu a {
+    white-space: nowrap;
+}
+
+#registration-authentication-form fieldset {
+    padding: 50px;
+}
+
+form .form-errors {
+    position: relative;
+    height: 50px;
+    visibility: hidden;
+}
+
+form .form-errors > p {
+    color: rgb(255, 174, 201);
+}
+
+.menu {
+    background-color: white;
+    border: solid black 1px;
+    padding: 25px 20px;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    color: black;
+
+    visibility: hidden;
+    z-index: 1;
+}
+
+.menu li {
+    padding: 10px 3px;
+    border-bottom: solid black 1px;
+}
+
+.menu li:hover {
+    cursor: pointer;
+}
+
+
+#registration-authentication-form div:nth-of-type(3) {
+    margin-bottom: 70px;
+}
+
+
+#registration-authentication-form .form-errors>p {
+    position: absolute;
+    top: 10px;
+    left: calc(50% - (650px / 4));
+    width: 650px;
+}
+
+#registration-authentication-form button {
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    nav>div:nth-of-type(1)>div:nth-of-type(1),
+    nav>div:nth-of-type(1)>div:nth-of-type(3) {
+        width: 70%;
+    }
+
+    nav>div:nth-of-type(1)>div:nth-of-type(2),
+    nav>div:nth-of-type(1)>div:nth-of-type(4) {
+        width: 30%;
+    }
+
+    #burger {
+        visibility: visible;
+    }
+
+    #product-nav-menu {
+        overflow-y: scroll;
+        width: 60%;
+        flex-direction: column;
+        background-color: white;
+        justify-content: start;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -60%;
+    }
+
+
+    #product-nav-menu>div {
+        font-size: 18px;
+    }
+
+    #product-nav-menu .nested-block {
+        font-size: 16px;
+        margin-top: 25px;
+        margin-left: 20px;
+    }
+
+    #product-nav-menu .sub-menu {
+        font-size: 15px;
+        margin-left: 20px;
+    }
+
+    #product-nav-menu>div {
+        color: black;
+        margin-bottom: 30px;
+        margin-left: 40px;
+    }
+
+    #product-nav-menu>div:hover{
+        color: rgb(255, 174, 201);
+        border-color: rgb(255, 174, 201);
+        cursor: pointer;
+    }
+
+    #product-nav-menu>div>div {
+        flex-direction: column;
+    }
+
+    #product-nav-menu>div>div>div:nth-of-type(2) {
+        margin: 0;
+    }
+
+    #product-nav-menu>div>div>div {
+        margin-bottom: 30px;
+    }
+
+    #user-nav-menu .nested-block {
+        left: 0;
+    }
+
+    #registration-authentication-form form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu {
+        border: none;
+        position: static;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        border-bottom: none;
+    }
+
+    .open-menu {
+        left: 0 !important;
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    nav>div:nth-of-type(1)>div:nth-of-type(1),
+    nav>div:nth-of-type(1)>div:nth-of-type(2) {
+        width: 100%;
+    }
+
+    form .form-errors {
+        height: 80px;
+    }
+
+    #product-nav-menu {
+        width: 100%;
+        left: -100%;
+    }
+
+    #user-nav-menu {
+        width: 100%;
+    }
+
+    #user-nav-menu .nested-block {
+        left: -170px;
+    }
+
+    #registration-authentication-form fieldset {
+        padding: 50px 10px;
+    }
+
+    #registration-authentication-form .form-errors>p {
+        width: auto;
+        left: 0;
+        top: 20px;
+    }
+
+}

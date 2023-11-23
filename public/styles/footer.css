@@ -1,0 +1,105 @@
+footer {
+    background-color: rgb(24, 24, 24);
+    padding: 200px;
+}
+
+footer>div {
+    width: 20%;
+}
+
+footer>div:nth-of-type(1) span {
+    margin-right: 7px;
+}
+
+footer>div:nth-of-type(1)>ul>li:last-child>span {
+    margin-right: 10px;
+}
+
+
+footer a:hover,
+footer>div:nth-of-type(1)>ul>li:last-child>span:hover {
+    color: rgb(255, 213, 216);
+    cursor: pointer;
+}
+
+footer h5 {
+    margin-bottom: 25px;
+}
+
+footer h5>span {
+    color: white;
+    font-size: 14px;
+}
+
+footer h5>span:nth-of-type(2) {
+    visibility: hidden;
+}
+
+footer li,
+footer li>a,
+footer p {
+    color: rgb(154, 154, 154);
+}
+
+footer li,
+footer p {
+    margin-bottom: 10px;
+}
+
+
+footer input,
+form button {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+footer button {
+    background-color: rgb(255, 213, 216);
+    color: white;
+    margin-top: 10px;
+}
+
+
+footer button:hover {
+    background-color: rgb(154, 154, 154);
+    border: solid white 3px;
+    cursor: pointer;
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    footer {
+        flex-direction: column;
+        padding: 100px 80px;
+    }
+
+    footer>div {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    footer>div:hover {
+        cursor: pointer;
+    }
+
+    footer h5>span:nth-of-type(2) {
+        visibility: visible;
+    }
+
+
+
+    footer .nested-block {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+}
+
